@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    background-color: #fae6f0;
+}
+.content {
+    width: auto;
+    margin: 0 auto;
+}
+.content > * {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    border: 0.5px solid #fae6f0;
+    padding: 10px;
+}
+
+td {
+    background: #f5b5d5;
+}
+
+td:first-child, td:nth-child(6), td:nth-child(7) {
+    background: #fae6f0;
+}
+
+.list_author td:nth-child(4), .list_author td:nth-child(5) {
+    background: #fae6f0;
+}
+
+.item-list table{
+    margin: 0 auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none !important;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.button_block {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 260px;
+}
+
+.but_creare {
+    width: 100%;
+    text-align: center;
+    background-color: #f55ba8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.but_creare a {
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #f086bb;
+}
+
+form, .instr-block {
+    width: 300px;
+    padding: 10px;
+    padding-top: 20px;
+    background: #f5b5d5;
+    border: 2px solid #f55ba8;
+}
+
+form .dataBox {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+form .dataBox input, .instr-block a {
+    font-family: Montserrat, sans-serif;
+    padding: 7px 15px;
+    margin-top: 7px;
+    width: 200px;
+    border: none;
+    border-radius: 15px;
+}
+
+form .dataBox select {
+    font-family: Montserrat, sans-serif;
+    padding: 7px 15px;
+    margin-top: 7px;
+    width: 200px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 15px;
+}
+
+form .dataBox input[type=submit], .instr-block a {
+    background: #f55ba8;
+    color: white;
+    font-size: 20px;
+}
+
+form .dataBox input[type=submit]:hover, .instr-block a:hover {
+    color: #f086bb;
+}
+
+.edit-block .back, .back {
+    margin-top: 10px;
+}
+.edit-block form, .instr-block {
+    margin: 0 auto;
+}
+.instr-block a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+       

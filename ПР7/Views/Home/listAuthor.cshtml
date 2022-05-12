@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ПР7.Models.Author>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Список авторов</title>
+</head>
+<body>
+    <div class="content">
+        <h2>@ViewData["Title"]</h2>
+        <div class="item-list">
+            <table class="list_author">
+                <tr>
+                    <th>Id</th>
+                    <th>Имя автора</th>
+                    <th>Страна</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Country</td>
+                        <td>@Html.ActionLink("Редактировать", "editAuthor", item)</td>
+                        <td>@Html.ActionLink("Удалить", "deleteAuthor", item)</td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+        <div class="button_block">
+            <div class="but_creare">
+                @Html.ActionLink("Добавить автора", "createAuthor")
+            </div>
+            <div class="back">
+                <a asp-action="Index">К списку песен</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

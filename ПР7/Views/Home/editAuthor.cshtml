@@ -1,0 +1,43 @@
+﻿@model Author;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Редактирование автора</title>
+</head>
+<body>
+    <div class="content">
+        <div class="edit-block">
+            <h2>Автор</h2>
+            @using (Html.BeginForm("editAuthor", "Home"))
+            {
+                @Html.HiddenFor(m => m.Id)
+                <div class="dataBox">
+                    <label>Имя</label><br />
+                    @Html.TextBoxFor(m => m.Name, new { @class = "text-box" })
+                </div>
+                <div class="dataBox">
+                    <label>Страна</label><br />
+                    @Html.TextBoxFor(m => m.Country, new { @class = "text-box" })
+                </div>
+                <br />
+                <div class="dataBox">
+                    <input type="submit" value="Сохранить" />
+                </div>
+            }
+        </div>
+
+        <div class="button_block">
+            <div class="back">
+                <a asp-action="Index">К списку песен</a>
+            </div>
+            <div class="back">
+                @Html.ActionLink("К списку авторов", "listAuthor")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

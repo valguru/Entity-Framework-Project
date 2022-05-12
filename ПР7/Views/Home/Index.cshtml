@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ПР7.Models.Song>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Список песен</title>
+</head>
+<body>
+    <div class="content">
+        <h2>@ViewData["Title"]</h2>
+        <div class="item-list">
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Название</th>
+                    <th>Автор</th>
+                    <th>Год выпуска</th>
+                    <th>Страна</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@Html.ActionLink(item.Author.Name, "infoAuthor", new { item.Author.Id })</td>
+                        <td>@item.Year</td>
+                        <td>@item.Author.Country</td>
+                        <td>@Html.ActionLink("Редактировать", "editSong", item)</td>
+                        <td>@Html.ActionLink("Удалить", "deleteSong", item)</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    
+        <div class="button_block">
+            <div class="but_creare">
+                @Html.ActionLink("Добавить песню", "createSong")
+            </div>
+            <div class="but_creare">
+                @Html.ActionLink("Список авторов", "listAuthor")
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
